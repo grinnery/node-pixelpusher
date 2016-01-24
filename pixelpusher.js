@@ -231,7 +231,8 @@ Controller.prototype.refresh = function(strips) {
         }
 
         if( !that.currentStripData[i] || that.currentStripData.length == 0) {
-            // console.log('Strip #' + stripId + ' empty');
+            //TODO: error out
+            console.log('Strip #' + stripId + ' empty');
             continue;
         }
 
@@ -240,8 +241,6 @@ Controller.prototype.refresh = function(strips) {
         if (buffertools.equals(strips[i].data, that.currentStripData[i].data)) {
             //console.log('Strip #' + stripId + ' unchanged');
             //continue;
-        } else {
-            console.log('Strip #' + stripId + ' valid');
         }
 
         // push the valid strip
